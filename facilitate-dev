@@ -1,0 +1,36 @@
+#----------------- 开发、测试阶段不使用页面缓存 -----------------
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.mode=HTML5
+spring.thymeleaf.encoding=UTF-8
+spring.thymeleaf.cache=false
+
+#-----------------乱码处理------------------------
+spring.http.encoding.force=true
+spring.http.encoding.charset=UTF-8
+spring.http.encoding.enabled=true
+server.tomcat.uri-encoding=UTF-8
+
+#----------------- 数据源配置 -----------------
+#第一数据库：读写库
+spring.datasource.bigdat.url=jdbc:oracle:thin:@172.30.35.100:1521:orcl
+spring.datasource.bigdat.username=bigdat
+spring.datasource.bigdat.password=bigdat
+
+#第二个数据库：只读库
+spring.datasource.bigmiddle.url=jdbc:oracle:thin:@172.30.35.100:1521:orcl
+spring.datasource.bigmiddle.username=bigmiddle
+spring.datasource.bigmiddle.password=123456
+
+#第三个数据库：只读库
+spring.datasource.rhin.url=jdbc:oracle:thin:@172.30.35.100:1521:orcl
+spring.datasource.rhin.username=rhin_portal
+spring.datasource.rhin.password=123456
+
+#第四个数据库：只读库
+spring.datasource.ihe.url=jdbc:oracle:thin:@172.30.35.100:1521:orcl
+spring.datasource.ihe.username=ihe
+spring.datasource.ihe.password=123456
+
+#----------------- redis配置 -----------------
+spring.redis.cluster.nodes=172.30.34.3:7000,172.30.34.3:7001,172.30.34.3:7002,172.30.34.3:7003,172.30.34.3:7004
